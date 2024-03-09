@@ -16,7 +16,7 @@ export const SearchInput = () => {
     const name  = searchParams.get("name")
     
     const [value, setValue] = useState(name || '');
-    const debouncedValue = useDebounce<string>(value, 500)
+    const debouncedValue = useDebounce<string>(value, 500) // Finish timing from user
 
     const onChange: ChangeEventHandler<HTMLInputElement> = (e) => {
         setValue(e.target.value)
@@ -27,7 +27,7 @@ export const SearchInput = () => {
             name: debouncedValue,
             categoryId: categoryId
         }
-        const url  = qs.stringifyUrl({
+        const url = qs.stringifyUrl({
             url: window.location.href,
             query,
         }, {skipEmptyString: true, skipNull: true})

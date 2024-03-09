@@ -24,7 +24,7 @@ export const Navbar = () =>{
                         "hidden md:block text-xl md:text-3xl font-bold x-primary",
                         font.className
                         )}>
-                        Gem.ai 
+                        comp.ai 
                     </h1>
                 </Link>
             </div>
